@@ -86,25 +86,37 @@ SELECT * FROM tipo_assinatura;
 SET IDENTITY_INSERT assinatura ON;
 INSERT INTO assinatura (id, id_pessoa, id_assinatura) VALUES
 (1, 1, 1),
-(2,2, 12),
-(3,3, 6),
-(4,4, 10),
-(5,5, 4),
-(6,6, 7);
+(2, 12, 6),
+(3, 6, 2),
+(4, 10, 4),
+(5,5, 5),
+(6, 6, 1);
 SET IDENTITY_INSERT assinatura OFF;
 SELECT * FROM assinatura;
 
-SET IDENTITY_INSERT pagamento ON;
-INSERT INTO pagamento (id, forma_pagamento, data_pagamento, id_assinatura) VALUES
-(1, 'Cartão de Crédito', '2023-01-15', 1),
-(2, 'Boleto Bancário', '2023-02-20', 2),
-(3, 'Transferência Bancária', '2023-03-25', 3),
-(4, 'PayPal', '2023-04-10', 4),
-(5, 'Débito Automático', '2023-05-05', 5),
-(6, 'Pix', '2023-06-15', 6);
-SET IDENTITY_INSERT pagamento OFF;
-SELECT * FROM pagamento;
+SET IDENTITY_INSERT forma_pagamento ON;
+INSERT INTO forma_pagamento (id_forma_pagamento, nome_forma_pagamento) 
+VALUES
+(1, 'Cartão de Crédito'),
+(2, 'Boleto Bancário'),
+(3, 'Transferência Bancária'),
+(4, 'PayPal'),
+(5, 'Débito Automático'),
+(6, 'Pix');
+SET IDENTITY_INSERT forma_pagamento OFF;
+SELECT * FROM forma_pagamento;
 
+SET IDENTITY_INSERT pagamento ON;
+INSERT INTO pagamento (id,data_pagamento, id_assinatura, id_forma_pagamento) 
+VALUES
+(1, '2023-01-15', 1, 1),
+(2, '2023-02-20', 2, 2),
+(3, '2023-03-25', 3, 3),
+(4, '2023-04-10', 4, 4),
+(5, '2023-05-05', 5, 5),
+(6, '2023-06-15', 6, 6)
+SET IDENTITY_INSERT pagamento OFF;
+SELECT * FROM pagamento;
 
 SET IDENTITY_INSERT area_juridica ON;
 INSERT INTO area_juridica (id, nome) 
