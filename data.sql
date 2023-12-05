@@ -1,12 +1,12 @@
 SET IDENTITY_INSERT pessoa ON;
 INSERT INTO pessoa (id, CPF, nome, email, senha) 
 VALUES 
-(1,'12345678901', 'José da Silva', 'jose.silva@email.com', 'S3nh@123'),
-(2,'98765432100', 'Ana Oliveira', 'ana.oliveira@email.com', 'x!Y2p#8sL@vR'),
+(1,'12345678901', 'JosÃ© da Silva', 'jose.silva@email.com', 'S3nh@123'),
+(2,'98765432100', 'Ana Fernandes', 'ana.fernandes@email.com', 'x!Y2p#8sL@vR'),
 (3,'11122233344', 'Carlos Alberto Santos', 'carlos.santos@email.com', '$Bw9k@4Gh*3n'),
 (4,'55566677788', 'Amanda Costa', 'amanda.costa@email.com', '2!PdQ@7zF#1o'),
 (5,'99988877766', 'Fernando Pereira', 'fernando.pereira@email.com', '1G$8q@3sR!6p'),
-(6,'44433322211', 'Patrícia Lima', 'patricia.lima@email.com', 'Lima@2023'),
+(6,'44433322211', 'PatrÃ­cia Lima', 'patricia.lima@email.com', 'Lima@2023'),
 (7,'77788899900', 'Roberto Souza', 'roberto.souza@email.com', 'Souza!789'),
 (8,'22211144455', 'Camila Martins', 'camila.martins@email.com', 'C@mila2023'),
 (9,'66655544433', 'Lucas Oliveira', 'lucas.oliveira@email.com', 'L#cas123'),
@@ -57,26 +57,26 @@ SELECT * FROM conversa;
 SET IDENTITY_INSERT mensagem ON;
 INSERT INTO mensagem (id, id_conversa, id_emissor, tipo_conteudo, conteudo)
 VALUES
-(1, 1, 1, 'texto', 'Prezada Sra.Amanda Costa, boa tarde. Gostaria de agendar uma reunião para discutir detalhes do seu caso. Por favor, informe sua disponibilidade.'),
-(2, 2, 2, 'texto', 'Prezado Sr. Fernando Pereira, gostaria de discutir o parecer jurídico atualizado referente ao meu processo. Poderia agendar uma reunião para discutirmos os próximos passos?'),
-(3, 3, 3, 'audio', 'Sra. Patrícia Lima, gostaria de discutir as últimas atualizações do meu caso.'),
-(4, 4, 7, 'video', 'Prezada Advogada Aline Santos, gostaria de discutir se este vídeo explicativo sobre a legislação tributária que estou enviando se encaixa com meu caso.'),
-(5, 5, 8, 'arquivo', 'Prezada Sra. Juliana Lima, estou te enviando o contrato revisado. Poderia discutir comigo as alterações propostas?'),
-(6, 6, 9, 'link', 'Sr. Pedro, o link a seguir contém informações relevantes para minha situação legal.'),
-(7, 7, 10, 'texto', 'Prezado Sr. Roberto Souza, precisamos discutir a estratégia de defesa para a audiência marcada. Por favor, agende um horário conveniente.'),
-(8, 8, 11, 'audio', 'Sra. Camila Martins, encontrei jurisprudência relevante para o seu caso. Vou enviar os detalhes por e-mail para sua análise.'),
-(9, 9, 12, 'texto', 'Sr. Carlos Alberto, deixei uma mensagem de voz com atualizações sobre o processo. Quando puder, dê uma conferida.'),
-(10, 10, 6, 'video', 'Sr. Carlos Alberto, assista ao vídeo explicativo que preparei sobre os próximos passos do seu caso. Estou à disposição para esclarecimentos.'),
-(11, 11, 5, 'texto', 'Sra. Ana Oliveira, revisei o contrato e destaquei pontos importantes. Podemos discutir durante nossa próxima reunião.'),
-(12, 12, 4, 'link', 'Prezado Sro. Lucas Oliveira, o link abaixo contém informações atualizadas sobre as mudanças na legislação que podem impactar seu caso. Recomendo a leitura antes de nossa próxima consulta.');
+(1, 1, 1, 'texto', 'Prezada Sra.Amanda Costa, boa tarde. Gostaria de agendar uma reuniÃ£o para discutir detalhes do seu caso. Por favor, informe sua disponibilidade.'),
+(2, 2, 2, 'texto', 'Prezado Sr. Fernando Pereira, gostaria de discutir o parecer jurÃ­dico atualizado referente ao meu processo. Poderia agendar uma reuniÃ£o para discutirmos os prÃ³ximos passos?'),
+(3, 3, 3, 'audio', 'Sra. PatrÃ­cia Lima, gostaria de discutir as Ãºltimas atualizaÃ§Ãµes do meu caso.'),
+(4, 4, 7, 'video', 'Prezada Advogada Aline Santos, gostaria de discutir se este vÃ­deo explicativo sobre a legislaÃ§Ã£o tributÃ¡ria que estou enviando se encaixa com meu caso.'),
+(5, 5, 8, 'arquivo', 'Prezada Sra. Juliana Lima, estou te enviando o contrato revisado. Poderia discutir comigo as alteraÃ§Ãµes propostas?'),
+(6, 6, 9, 'link', 'Sr. Pedro, o link a seguir contÃ©m informaÃ§Ãµes relevantes para minha situaÃ§Ã£o legal.'),
+(7, 7, 10, 'texto', 'Prezado Sr. Roberto Souza, precisamos discutir a estratÃ©gia de defesa para a audiÃªncia marcada. Por favor, agende um horÃ¡rio conveniente.'),
+(8, 8, 11, 'audio', 'Sra. Camila Martins, encontrei jurisprudÃªncia relevante para o seu caso. Vou enviar os detalhes por e-mail para sua anÃ¡lise.'),
+(9, 9, 12, 'texto', 'Sr. Carlos Alberto, deixei uma mensagem de voz com atualizaÃ§Ãµes sobre o processo. Quando puder, dÃª uma conferida.'),
+(10, 10, 6, 'video', 'Sr. Carlos Alberto, assista ao vÃ­deo explicativo que preparei sobre os prÃ³ximos passos do seu caso. Estou Ã  disposiÃ§Ã£o para esclarecimentos.'),
+(11, 11, 5, 'texto', 'Sra. Ana Fernandes, revisei o contrato e destaquei pontos importantes. Podemos discutir durante nossa prÃ³xima reuniÃ£o.'),
+(12, 12, 4, 'link', 'Prezado Sro. Lucas Oliveira, o link abaixo contÃ©m informaÃ§Ãµes atualizadas sobre as mudanÃ§as na legislaÃ§Ã£o que podem impactar seu caso. Recomendo a leitura antes de nossa prÃ³xima consulta.');
 SET IDENTITY_INSERT mensagem OFF;
 SELECT * FROM mensagem;
 
 SET IDENTITY_INSERT tipo_assinatura ON;
 INSERT INTO tipo_assinatura (id, nome, valor) VALUES
-(1, 'Básica', 50.00),
+(1, 'BÃ¡sica', 50.00),
 (2, 'Premium', 100.00),
-(3, 'Avançada', 150.00),
+(3, 'AvanÃ§ada', 150.00),
 (4, 'Empresarial', 200.00),
 (5, 'Individual', 75.00),
 (6, 'Personalizada', 250.00);
@@ -96,14 +96,14 @@ SELECT * FROM assinatura;
 
 SET IDENTITY_INSERT pagamento ON;
 INSERT INTO pagamento (id, forma_pagamento, data_pagamento, id_assinatura) VALUES
-(1, 'Cartão de Crédito', '2023-01-15', 1),
-(2, 'Boleto Bancário', '2023-02-20', 2),
-(3, 'Transferência Bancária', '2023-03-25', 3),
+(1, 'CartÃ£o de CrÃ©dito', '2023-01-15', 1),
+(2, 'Boleto BancÃ¡rio', '2023-02-20', 2),
+(3, 'TransferÃªncia BancÃ¡ria', '2023-03-25', 3),
 (4, 'PayPal', '2023-04-10', 4),
-(5, 'Débito Automático', '2023-05-05', 5),
+(5, 'DÃ©bito AutomÃ¡tico', '2023-05-05', 5),
 (6, 'Pix', '2023-06-15', 6);
 SET IDENTITY_INSERT pagamento OFF;
-SELECT * FROM pagamento;
+SELECT *Â FROMÂ pagamento;
 
 
 SET IDENTITY_INSERT area_juridica ON;
@@ -112,9 +112,9 @@ VALUES
 (1, 'Direito Civil'),
 (2, 'Direito Penal'),
 (3, 'Direito Trabalhista'),
-(4, 'Direito Tributário'),
+(4, 'Direito TributÃ¡rio'),
 (5, 'Direito Empresarial'),
-(6, 'Direito Ambiental');
+(6, 'DireitoÂ Ambiental');
 SET IDENTITY_INSERT area_juridica OFF;
 SELECT * FROM area_juridica;
 
@@ -122,12 +122,12 @@ SELECT * FROM area_juridica;
 SET IDENTITY_INSERT caso_juridico ON;
 INSERT INTO caso_juridico (id, titulo, descricao, id_cliente, id_advogado, id_area_juridica) 
 VALUES
-(1, 'Defesa em Ação Trabalhista', 'Representação em ação trabalhista por rescisão injusta.', 3, 4, 3),
-(2, 'Contrato de Locação', 'Assessoria na elaboração de contrato de locação comercial.', 2, 5, 5),
-(3, 'Defesa Criminal', 'Assistência na defesa de acusação criminal por fraude.', 7, 6, 2),
-(4, 'Regularização Ambiental', 'Processo de regularização ambiental para empresa do setor industrial.', 9, 10, 6),
-(5, 'Negociação Empresarial', 'Mediação em disputa entre sócios de uma empresa.', 1, 11, 5),
-(6, 'Ação de Indenização', 'Ajuizamento de ação de indenização por danos morais.',8 , 12, 1);
+(1, 'Defesa em AÃ§Ã£o Trabalhista', 'RepresentaÃ§Ã£o em aÃ§Ã£o trabalhista por rescisÃ£o injusta.', 3, 4, 3),
+(2, 'Contrato de LocaÃ§Ã£o', 'Assessoria na elaboraÃ§Ã£o de contrato de locaÃ§Ã£o comercial.', 2, 5, 5),
+(3, 'Defesa Criminal', 'AssistÃªncia na defesa de acusaÃ§Ã£o criminal por fraude.', 7, 6, 2),
+(4, 'RegularizaÃ§Ã£o Ambiental', 'Processo de regularizaÃ§Ã£o ambiental para empresa do setor industrial.', 9, 10, 6),
+(5, 'NegociaÃ§Ã£o Empresarial', 'MediaÃ§Ã£o em disputa entre sÃ³cios de uma empresa.', 1, 11, 5),
+(6, 'AÃ§Ã£o de IndenizaÃ§Ã£o', 'Ajuizamento de aÃ§Ã£o de indenizaÃ§Ã£o por danos morais.',8 , 12, 1);
 SET IDENTITY_INSERT caso_juridico OFF;
-SELECT * FROM caso_juridico;
+SELECT * FROMÂ caso_juridico;
 
