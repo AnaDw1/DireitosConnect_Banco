@@ -1,4 +1,4 @@
-SET IDENTITY_INSERT pessoa ON;
+SET IDENTITY_INSERT pessoa ON; -- Habilita a inserção de valores na coluna identity (id) da tabela 'pessoa'
 INSERT INTO pessoa (id, CPF, nome, email, senha) 
 VALUES 
 (1,'12345678901', 'José da Silva', 'jose.silva@email.com', 'S3nh@123'),
@@ -13,7 +13,7 @@ VALUES
 (10,'33344455566', 'Aline Santos', 'aline.santos@email.com', '6!yE#9kPz$8o'),
 (11,'88877766655', 'Juliana Lima', 'juliana.lima@email.com', 'Juli@na789'),
 (12,'00011122233', 'Pedro Souza', 'pedro.souza@email.com', 'P#dr0XYZ');
-SET IDENTITY_INSERT pessoa OFF;
+SET IDENTITY_INSERT pessoa OFF; -- Desabilita a inserção de valores na coluna identity (id) da tabela 'pessoa'
 SELECT * FROM pessoa;
 
 INSERT INTO cliente (id_pessoa) 
