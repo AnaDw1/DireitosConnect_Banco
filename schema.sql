@@ -51,13 +51,20 @@ CREATE TABLE assinatura (
     FOREIGN KEY (id_pessoa) REFERENCES pessoa (id)
 );
 
+CREATE TABLE forma_pagamento (
+    id_forma_pagamento INT NOT NULL PRIMARY KEY IDENTITY,
+    nome_forma_pagamento VARCHAR(30) NOT NULL --Cartão de Crédito, Boleto Bancário, Transferência Bancária, PayPal, Débito Automático, Pix
+);
+
 CREATE TABLE pagamento (
     id INT NOT NULL PRIMARY KEY IDENTITY,
-    forma_pagamento VARCHAR(30), --Cartão de Crédito, Boleto Bancário, Transferência Bancária, PayPal, Débito Automático, Pix
     data_pagamento DATE,
     id_assinatura INT NOT NULL,
-    FOREIGN KEY (id_assinatura) REFERENCES tipo_assinatura(id)
+    id_forma_pagamento INT NOT NULL,
+    FOREIGN KEY (id_assinatura) REFERENCES tipo_assinatura(id),
+    FOREIGN KEY (id_forma_pagamento) REFERENCES forma_pagamento(id_forma_pagamento)
 );
+
 
 CREATE TABLE area_juridica (
     id INT NOT NULL PRIMARY KEY IDENTITY,
