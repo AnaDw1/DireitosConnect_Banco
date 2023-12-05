@@ -39,7 +39,7 @@ CREATE TABLE mensagem (
 
  CREATE TABLE tipo_assinatura (
     id INT NOT NULL PRIMARY KEY IDENTITY,
-    nome VARCHAR(30) NOT NULL,
+    nome VARCHAR(30) NOT NULL, -- --'Básica', 'Premium', 'Avançada', 'Empresarial', 'Individual', 'Personalizada'
     valor FLOAT NOT NULL
 );
 
