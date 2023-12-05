@@ -33,7 +33,7 @@ CREATE TABLE mensagem (
     id_conversa INT NOT NULL,
     FOREIGN KEY (id_conversa) REFERENCES conversa (id),
     id_emissor INT NOT NULL,
-    tipo_conteudo VARCHAR(20), -- 'imagem' / 'video' / 'texto'/ 'link'
+    tipo_conteudo VARCHAR(20), -- 'imagem' / 'video' / 'texto'/ 'link' / 'audio'
     conteudo VARCHAR(255)
 );
 
@@ -53,7 +53,7 @@ CREATE TABLE assinatura (
 
 CREATE TABLE pagamento (
     id INT NOT NULL PRIMARY KEY IDENTITY,
-    forma_pagamento VARCHAR(30),
+    forma_pagamento VARCHAR(30), --Cartão de Crédito, Boleto Bancário, Transferência Bancária, PayPal, Débito Automático, Pix
     data_pagamento DATE,
     id_assinatura INT NOT NULL,
     FOREIGN KEY (id_assinatura) REFERENCES tipo_assinatura(id)
