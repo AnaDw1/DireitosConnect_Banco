@@ -1,15 +1,15 @@
-CREATE DATABASE DireitosConnect;
+CREATE DATABASE DireitosConnect; --criação do banco de dados
 USE DireitosConnect;
 
-CREATE TABLE pessoa (
-    id INT NOT NULL PRIMARY KEY IDENTITY,
+CREATE TABLE pessoa ( --criação da tabela pessoa
+    id INT NOT NULL PRIMARY KEY IDENTITY, --id unico para cada pessoa/usuário
     CPF CHAR(11) NOT NULL UNIQUE,
     nome VARCHAR(50),
     email VARCHAR(50) NOT NULL UNIQUE,
     senha VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE cliente (
+CREATE TABLE cliente ( --tabela cliente ou usuário
     id_pessoa INT NOT NULL PRIMARY KEY,
     FOREIGN KEY (id_pessoa) REFERENCES pessoa (id)
 );
@@ -33,7 +33,7 @@ CREATE TABLE mensagem (
     id_conversa INT NOT NULL,
     FOREIGN KEY (id_conversa) REFERENCES conversa (id),
     id_emissor INT NOT NULL,
-    tipo_conteudo VARCHAR(20), -- 'imagem' / 'video' / 'texto'
+    tipo_conteudo VARCHAR(20), -- 'imagem' / 'video' / 'texto'/ 'link'
     conteudo VARCHAR(255)
 );
 
